@@ -1,0 +1,92 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+
+    <div class="panel-body" *ngIf="book">
+        <form class="form-horizontal" [ngFormModel]="editForm" (ngSubmit)="saveBook()">
+            <fieldset>
+                <div class="form-group" [ngClass]="{'has-error': formError.title }">
+                    <label class="col-md-2 control-label" for="inputBookTitle">Book Title</label>
+
+                    <div class="col-md-8">
+                        <input class="form-control" 
+                                id="inputBookTitle" 
+                                type="text" 
+                                placeholder="Title (required)" 
+                                ngControl="title" />
+                        <span class="help-block" *ngIf="formError.title">
+                                {{formError.title}}
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="form-group" [ngClass]="{'has-error': formError.writer }">
+                    <label class="col-md-2 control-label" for="inputWriter">Writer</label>
+
+                    <div class="col-md-8">
+                        <input class="form-control" 
+                                id="inputWriter" 
+                                type="text" 
+                                placeholder="Writer (required)" 
+                                ngControl="writer" />
+                        <span class="help-block" *ngIf="formError.writer">
+                                {{formError.writer}}
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="form-group" [ngClass]="{'has-error': formError.starRating}">
+                    <label class="col-md-2 control-label" for="inputStarRating">Star Rating (1-5)</label>
+
+                    <div class="col-md-8">
+                        <input class="form-control" 
+                                id="inputStarRating" 
+                                type="text" 
+                                placeholder="Rating" 
+                                ngControl="starRating" />
+                        <span class="help-block" *ngIf="formError.starRating">
+                                {{formError.starRating}}
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="form-group" [ngClass]="{'has-error': formError.description}">
+                    <label class="col-md-2 control-label" for="inputBookDescription">Description</label>
+
+                    <div class="col-md-8">
+                        <textarea class="form-control" 
+                                id="inputBookDescription" 
+                                placeholder="Description"
+                                rows=3
+                                ngControl="description"></textarea>
+                        <span class="help-block" *ngIf="formError.description">
+                                {{ formError.description}}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-4 col-md-offset-2">
+                        <span>
+                            <button class="btn btn-primary"
+                                    type="submit"
+                                    style="width:80px;margin-right:10px"
+                                    [disabled]='!editForm.valid'>
+                                Save
+                            </button>
+                        </span>
+                        <span>
+                            <a class="btn btn-default"
+                               style="width:80px"
+                               [routerLink]="['/books']">
+                                Cancel
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+</div>

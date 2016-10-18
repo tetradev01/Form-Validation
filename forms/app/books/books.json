@@ -1,0 +1,25 @@
+[
+    {
+        "writer": " Preeti Shenoy",
+        "description": "When a strong, self- dependent and bold lady, Vipasha, known to her friends as Vee, makes a choice that changes everything, she is left to wonder if life really holds any reason at all. The story starts with Vee lying in a hospital after making the biggest decision in her short 18-year-old life.",
+        "imageurl": "http://ecx.images-amazon.com/images/I/51AQaSK0zJL._SX323_BO1,204,203,200_.jpg",
+        "bookId": 1,
+        "mpaa": "pg-13",
+        "publishDate": "2001-12-19T00:00:00",
+        "title": "It Happens For a Reason",
+        "price": 12.95,
+        "starRating": 4.88
+    },
+    {
+        "writer": "Rashmi Bansal",
+        "description": "Stay Hungry Stay Foolish portrays the success stories of 25 entrepreneurs, who graduated from IIM Ahmadabad. Instead of a picking a high paying 9 to 5 job, they chose the rough road to success.",
+        "imageurl": "https://cdn.paisaone.com/images/products/amazon-stay-hungry-stay-foolish-paperback-5-jul-2012.png",
+        "bookId": 2,
+        "mpaa": "pg-13",
+        "publishDate": "2002-12-18T00:00:00",
+        "title": "Stay Hungry Stay Foolish",
+        "price": 14.95,
+        "starRating": 4.2
+    }
+    
+]

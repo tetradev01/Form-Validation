@@ -1,0 +1,47 @@
+﻿<div class="panel panel-primary"
+     *ngIf="book">
+    <div class="panel-heading">
+        {{ pageTitle + ": " + book.title }}
+    </div>
+
+    <div class="panel-body">
+        <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+
+        <div class="row">
+            <div class="col-md-2">Description: </div>
+            <div class="col-md-10">{{ book.description }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">Writer: </div>
+            <div class="col-md-10">{{ book.writer }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">publishDate Date: </div>
+            <div class="col-md-10">{{ convertToDate(book.publishDate) | date}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">MPAA Film Rating: </div>
+            <div class="col-md-10">{{ book.mpaa | uppercase}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">Star Rating: </div>
+            <div class="col-md-10">
+                <is-star [rating]="book.starRating"></is-star>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-2">Average  Price: </div>
+            <div class="col-md-10">{{ book.price | currency:'USD':true }}</div>
+        </div>
+    </div>
+
+    <div class="panel-footer">
+        <a class="btn btn-default" (click)="onBack()" style="width:80px">
+            <i class="glyphicon glyphicon-chevron-left"></i> Back
+        </a>
+        <a class="btn btn-primary" style="width:80px;margin-left:10px" [routerLink]="['/bookEdit', book.bookId]">
+            Edit
+        </a>
+    </div>
+</div>
